@@ -2,6 +2,9 @@
 
 > A Vue.js project
 
+Web App for Async in Vue.js - Part 2
+
+
 ## Build Setup
 
 ``` bash
@@ -15,4 +18,3 @@ npm run dev
 npm run build
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
