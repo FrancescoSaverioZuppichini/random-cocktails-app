@@ -23,7 +23,7 @@ import axios from 'axios'
 import Cocktail from './Cocktail/Cocktail.vue'
 import SkeletonCard from 'skeleton-card-vuejs'
 
-const API_URL = 'http://www.thecocktaildb.com/api/json/v1/1/random.php'
+const API_URL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php'
 
 export default {
     name: "",
