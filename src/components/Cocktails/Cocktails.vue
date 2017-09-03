@@ -1,6 +1,6 @@
 <template>
 <v-container>
-    <transition-group name="fade" class='layout row wrap align-center' mode="out-in">
+    <transition-group name="fade" class='layout row wrap align-center' mode="out-in"
         <v-flex xs12 :key="cocktail.idDrink" v-for="cocktail in cocktails">
             <cocktail :cocktail="cocktail" class='mb-2'>
             </cocktail>
@@ -43,16 +43,17 @@ export default {
     methods: {
         getMore() {
             this.isLoading = true
+
             axios.get(API_URL)
                 .then(({ data }) => {
                     var cocktail = data.drinks[0]
                     this.cocktails.push(cocktail)
-                    cocktail.ingredients = this.createIngrediensString(cocktail)
+                    cocktail.ingredients = this.createIngrediens(cocktail)
                     this.isLoading = false
-
                 })
+                .catch(err => this.isLoading = false)
         },
-        createIngrediensString(cocktail) {
+        createIngrediens(cocktail) {
             var ingredients = []
 
             const ingredientKey = "strIngredient"
@@ -70,7 +71,6 @@ export default {
                 if (ingredientsString !== "") ingredients.push(ingredientsString)
             }
 
-            console.log(ingredients);
             return ingredients
         }
     }

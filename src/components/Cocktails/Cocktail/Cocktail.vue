@@ -2,7 +2,7 @@
 <v-card>
     <v-container fluid grid-list-lg>
         <v-card-title>
-                <v-flex xs7>
+                <v-flex>
                     <div>
                         <div class="headline">{{cocktail.strDrink}}</div>
                         <br/>
@@ -14,9 +14,8 @@
                         </ul>
                     </div>
                 </v-flex>
-                <v-flex xs5>
-                    <v-card-media :src="cocktail.strDrinkThumb" height="125px" contain></v-card-media>
-                </v-flex>
+                <v-spacer></v-spacer>
+                    <img :src="cocktail.strDrinkThumb" class='cocktail__image'></img>
         </v-card-title>
         <v-card-actions>
             <v-chip>
@@ -52,5 +51,8 @@ export default {
 </script>
 
 <style scoped>
+.cocktail__image{
+    height: 150px;
+}
 
 </style>
