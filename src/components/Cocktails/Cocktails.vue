@@ -50,6 +50,9 @@ export default {
                     this.cocktails.push(cocktail)
                     cocktail.ingredients = this.createIngrediens(cocktail)
                     this.isLoading = false
+                    // scroll it to bottom
+                    window.scrollTo(0,document.body.scrollHeight);
+
                 })
                 .catch(err => this.isLoading = false)
         },
