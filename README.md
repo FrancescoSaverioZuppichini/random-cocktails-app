@@ -4,6 +4,7 @@
 
 Web App for Async in Vue.js - Part 2
 
+https://medium.com/@FrancescoZ/async-in-vuejs-part-2-45e81c836e38
 
 ## Build Setup
 
